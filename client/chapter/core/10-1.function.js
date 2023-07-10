@@ -20,6 +20,7 @@ function calcPrice(
   priceB,
   priceC = getRandomValue(),
   priceD = getRandomValue()
+  // 디폴트 파라미터
 ){
 
   // priceC ||= 10;
