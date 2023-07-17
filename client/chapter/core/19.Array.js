@@ -47,9 +47,24 @@ console.log(friends);
 // 배열 요소 순환(loop)
 // for 문, for ~ of문
 
+for(let i =0; i< friends.length; i++){
+  console.log(friends[i]);
+}
+
+for(let value of friends){
+  console.log((value));
+}
+
+// 배열 순환 메서드 쓰는 것도 좋다
+// for of 는 itertaor 메서드 정의 되어 있을 때 사용가능 
 
 // 배열 복사
-let copiedArray;
+// let copiedArray = [...friends];
+// let copiedArray = friends.slice();
+let copiedArray = friends.toSorted;
+
+console.log(copiedArray);
+
 
 
 // 다차원 배열
