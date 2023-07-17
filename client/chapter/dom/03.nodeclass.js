@@ -47,6 +47,7 @@ const first = getNode('.first');
 console.log(first.nodeType == document.ELEMENT_NODE);
 console.log(first.nodeType == 1 );
 
+
 // - nodeName (vs. tagName)
 console.log(first.nodeName == 'SPAN');
 console.log(first.tagName == 'SPAN');

@@ -56,7 +56,9 @@ const timer = setTimeout(()=>{
 
 const { href, protocol, host, port, search, hash, replace, reload } = location;
 
-
+//location.replace() -> 원하는 링크로 이동(뒤로가기 불가)
+//location.href() -> 원하는 링크로 이동(뒤로가기 가능)
+//location.reload() -> 새로고침
 
 const urlParams = new URLSearchParams(location.search);
 
@@ -147,7 +149,9 @@ function getLocationPosition(){
 // availHeight : 브라우저의 크기
 // innerHeight : 브라우저 해상도 크기
 
-
+//orientation : 모니터 방향
+//(정방향 : landscape-primary)
+//(세로방향 : portrait-primary)
 
 const { width, height, availWidth, availHeight, orientation } = screen;
 
