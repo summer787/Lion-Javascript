@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css" />
 
     <script src="./lib/dom/getNode.js"></script>
+    <script src="./lib/dom/attr.js"></script>
+    <script src="./lib/dom/insert.js"></script>
+    <script src="./lib/dom/css.js"></script>
+
+
     <script src="./chapter/dom/03.nodeclass.js" defer></script>
     <!-- <script src="./main.js"></script> -->
     <!-- 순서 종속성 고려할 것 main이 가장 밑에 있는 경우가 많다 -->
@@ -14,7 +19,7 @@
 
   <body>
     <h1>
-      <span class="first">hello</span>
+      <span class="first" id="message" data-size="10">hello</span>
       <!-- 주석입니다. -->
       <span class="second">javascript</span>
     </h1>
