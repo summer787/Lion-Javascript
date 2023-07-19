@@ -27,17 +27,17 @@ first.classList.toggle('is-active'); //boolean값 반환
 
 console.log(first.classList.contains('is-active'));
 
-function addClass(node,className) {
-  if(typeof node == 'string') node = getNode(node);
+// function addClass(node,className) {
+//   if(typeof node == 'string') node = getNode(node);
 
-  if(typeof className !== 'string'){
-    throw new TypeError('addClass 함수의 두 번째 인수는 문자 타입 이어야 합니다.')
-  }
-  node.classList.add(className);
+//   if(typeof className !== 'string'){
+//     throw new TypeError('addClass 함수의 두 번째 인수는 문자 타입 이어야 합니다.')
+//   }
+//   node.classList.add(className);
 
-}
+// }
 
-addClass('.first','hello');
+// addClass('.first','hello');
 
 
 

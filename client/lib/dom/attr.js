@@ -58,4 +58,3 @@ function attr(node,prop,value){
 
 //IIFE
 
-푸쉬 캡슐화 확인
