@@ -1,5 +1,5 @@
-console.log('hello.js');
 
-const a = 10;
 
-function
+import { getNode } from "./lib/index.js";
+
+getNode()
