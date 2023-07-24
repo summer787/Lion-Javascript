@@ -17,6 +17,7 @@ import {
 const submit = getNode('#submit');
 const nameField = getNode('#nameField');
 const resultArea = getNode('.result');
+//회색박스
 
 // [phase-1]
 // 1. 주접 떨기 버튼을 클릭할 수 있는 핸들러를 연결해 주세요.
@@ -43,7 +44,9 @@ function handleSubmit(e){
   e.preventDefault();
 
   let name = nameField.value;
+  //input의 이름값
   const list = jujeobData(name);
+  //jujeobData의 리스트들을 다 가져옴
   const pick = list[getRandom(list.length)];
   //list.length -1였는데 제거하는 이유는 getRandom시 floor를 적용해서 내림처리를 하기 때문
   
@@ -59,7 +62,7 @@ function handleSubmit(e){
     //   removeClass('.alert-error','is-active');  
     // }, 2000); //2초 뒤에 자연스럽게 사라지게 하려고 추가가됨가 동시에 타이머가 돌아가는 것임
     //코드 실행을 늦추고 있다 이것이 비동기
-    showAlert('.alert-error','이름을 입력해 주세요!',2000);
+    // showAlert('.alert-error','이름을 입력해 주세요!',2000);
 
     // global gsap 넣으면 꺼짐
     shake.restart();
@@ -76,7 +79,8 @@ function handleSubmit(e){
     //str1.replace(/\s*/g,'');
 
     //Number로 형변환
-  // isNaN 으로 true false 체크   //다시 한번 확인해보기
+  // isNaN 으로 true false 체크   
+
   if (!isNumericString(name)) {
     showAlert('.alert-error','제대로된 이름을 입력 해주세요!!',2000);
 
@@ -94,7 +98,7 @@ function handleSubmit(e){
   //마이크로 애니메이션으로 제대로된 정보를 입력하지 않으면 인풋창 흔들리게 만들거임
   //근데 첫번째 눌렀을때만 됨 class에 shake가 추가되버려서  
   // 애니메이션 자체가 들어가고 자체가 사려져서 빠졌을 때는 작동을 안함 토글도 ㄴㄴ
-  //trasition이랑 애니메이션이라 차이 있음 깇은 얘기임
+  //trasition이랑 애니메이션이라 차이 있음 같은 얘기임
   //alert창이랑 마찬가지로 알아서 빠져줘야 다시 클래스에 쉐이크를 넣어야함
   //그럼 애니메이션 처리를 보통 라이브러리를 쓰긴함
   //html에서 main.js 위에 불러와서 사용해야 되니까 https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js로 엔진을 불러옴 
@@ -137,3 +141,57 @@ function handleSubmit(e){
 
 
 // -------------------
+
+//코드만 깔끔하게 보기
+// function handleSubmit(e) {
+//   e.preventDefault();
+
+//   let name = nameField.value;
+//   const list = jujeobData(name);
+//   const pick = list[getRandom(list.length)];
+
+//   if (!name || name.replace(/\s*/g, '') === '') {
+//     showAlert('.alert-error','이름을 입력해 주세요!!',2000);
+
+//     shake.restart();
+    
+//     return;
+//   }
+
+//   if (!isNumericString(name)) {
+//     showAlert('.alert-error','제대로된 이름을 입력 해주세요!!',2000);
+
+//     shake.restart();
+
+//     return;
+//   }
+
+//   clearContents(resultArea);
+//   insertLast(resultArea, pick);
+// }
+
+
+
+// function handleCopy(){
+
+//   const text = resultArea.textContent;
+
+//   copy(text).then(()=>{
+//     showAlert('.alert-success','클립보드 복사 완료!');
+//   })
+
+  
+// }
+
+
+// submit.addEventListener('click', handleSubmit);
+// resultArea.addEventListener('click',handleCopy)
+
+// //과제 :  이름을 제대로 입력 했을 때 클립보드에 복사가 될 수 있도록.
+
+//내가 그냥 작성한 것임 
+// const username = nameField.textContent;
+// if (isNumericString(username)) {
+//   copy(text).then(()=>{  
+// })
+// } 

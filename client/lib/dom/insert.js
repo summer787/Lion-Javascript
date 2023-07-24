@@ -46,3 +46,6 @@ export function insertAfter(node,text){
 // afterbegin  => insertFirst
 // beforeend   => insertLast
 // afterend    => insertAfter
+
+//insertLast 함수는 인자로 전달된 HTML 요소(node)가 유효한 ELEMENT NODE인지 확인
+//효한 경우 해당 요소의 마지막 위치에 새로운 HTML 콘텐츠(text)를 삽입
