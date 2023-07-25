@@ -1,5 +1,13 @@
-console.log('hello.js');
 
-const a = 10;
 
-function
+import {  } from "./lib/index.js";
+
+
+// xhr.get('http://www.naver.com')
+// .then(()=>{
+
+// })
+// .catch((err)=>{
+//   err
+// })
+
